@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Login.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Login.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">javax</span><span class="s2">.</span><span class="s1">swing</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.*;</span>
+
+<span class="s0">public class </span><span class="s1">Login </span><span class="s0">extends </span><span class="s1">JFrame </span><span class="s2">{</span>
+    <span class="s0">public </span><span class="s1">Login</span><span class="s2">() {</span>
+        <span class="s1">setTitle</span><span class="s2">(</span><span class="s3">&quot;Login&quot;</span><span class="s2">);</span>
+        <span class="s1">setSize</span><span class="s2">(</span><span class="s4">800</span><span class="s2">, </span><span class="s4">700</span><span class="s2">);</span>
+        <span class="s1">setDefaultCloseOperation</span><span class="s2">(</span><span class="s1">JFrame</span><span class="s2">.</span><span class="s1">EXIT_ON_CLOSE</span><span class="s2">);</span>
+
+        <span class="s1">JPanel panel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">();</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setLayout</span><span class="s2">(</span><span class="s0">new </span><span class="s1">GridBagLayout</span><span class="s2">());</span>
+        <span class="s1">GridBagConstraints gbc </span><span class="s2">= </span><span class="s0">new </span><span class="s1">GridBagConstraints</span><span class="s2">();</span>
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridx </span><span class="s2">= </span><span class="s4">0</span><span class="s2">;</span>
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridy </span><span class="s2">= </span><span class="s4">0</span><span class="s2">;</span>
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">insets </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Insets</span><span class="s2">(</span><span class="s4">10</span><span class="s2">, </span><span class="s4">10</span><span class="s2">, </span><span class="s4">10</span><span class="s2">, </span><span class="s4">10</span><span class="s2">); </span><span class="s5">// Espaçamento entre os componentes</span>
+
+        <span class="s1">JLabel usernameLabel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s3">&quot;Username:&quot;</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">usernameLabel</span><span class="s2">, </span><span class="s1">gbc</span><span class="s2">);</span>
+
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridy</span><span class="s2">++;</span>
+        <span class="s1">JTextField usernameField </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JTextField</span><span class="s2">(</span><span class="s4">20</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">usernameField</span><span class="s2">, </span><span class="s1">gbc</span><span class="s2">);</span>
+
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridy</span><span class="s2">++;</span>
+        <span class="s1">JLabel passwordLabel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s3">&quot;Password:&quot;</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">passwordLabel</span><span class="s2">, </span><span class="s1">gbc</span><span class="s2">);</span>
+
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridy</span><span class="s2">++;</span>
+        <span class="s1">JPasswordField passwordField </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPasswordField</span><span class="s2">(</span><span class="s4">20</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">passwordField</span><span class="s2">, </span><span class="s1">gbc</span><span class="s2">);</span>
+
+        <span class="s1">gbc</span><span class="s2">.</span><span class="s1">gridy</span><span class="s2">++;</span>
+        <span class="s1">JButton loginButton </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s3">&quot;Login&quot;</span><span class="s2">);</span>
+        <span class="s1">loginButton</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s4">460</span><span class="s2">, </span><span class="s4">200</span><span class="s2">, </span><span class="s4">170</span><span class="s2">, </span><span class="s4">50</span><span class="s2">);</span>
+        <span class="s1">loginButton</span><span class="s2">.</span><span class="s1">setFont</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Font</span><span class="s2">(</span><span class="s3">&quot;Arial&quot;</span><span class="s2">, </span><span class="s1">Font</span><span class="s2">.</span><span class="s1">BOLD</span><span class="s2">, </span><span class="s4">20</span><span class="s2">));</span>
+        <span class="s1">loginButton</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s5">// Aqui você pode adicionar a lógica de autenticação</span>
+            <span class="s5">// Exemplo: validar o username e password</span>
+            <span class="s5">// Se for válido, pode fechar a janela de login e abrir a próxima janela</span>
+            <span class="s1">dispose</span><span class="s2">(); </span><span class="s5">// Fecha a janela de login após o login bem-sucedido</span>
+            <span class="s5">// Insira aqui o código para abrir a próxima janela</span>
+            <span class="s0">new </span><span class="s1">Perfil</span><span class="s2">();</span>
+        <span class="s2">});</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">loginButton</span><span class="s2">, </span><span class="s1">gbc</span><span class="s2">);</span>
+
+        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
+
+        <span class="s1">setLocationRelativeTo</span><span class="s2">(</span><span class="s0">null</span><span class="s2">); </span><span class="s5">// Centraliza a janela na tela</span>
+        <span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">SwingUtilities</span><span class="s2">.</span><span class="s1">invokeLater</span><span class="s2">(</span><span class="s1">Login::</span><span class="s0">new</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
